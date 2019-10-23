@@ -204,7 +204,7 @@ export class TagComponent implements OnInit, AfterViewInit {
           this.filterOnGoing = true;
 
           this.imageStickLabels.forEach(data => {
-            if (data.label.name.indexOf(this.stickName) !== -1) {
+            if (data.label.name.toLowerCase().indexOf(this.stickName.toLowerCase()) !== -1) {
               data.show = true;
             } else {
               data.show = false;
